@@ -18,6 +18,7 @@
               class="bg-magnolia"
               name="Arcade"
               price="$9/mo"
+              duration="2 months free"
               @click="planSelected('arcade')"
             >
               <div class="rounded-full h-8 w-8 bg-orange-400 flex justify-center items-center">
@@ -29,6 +30,7 @@
               :class="{ active: 'advanced' }"
               name="Advanced"
               price="$9/mo"
+              duration="2 months free"
               @click="planSelected('advanced')"
             >
               <div class="rounded-full h-8 w-8 bg-strawberry-red opacity-75 flex justify-center items-center">
@@ -40,6 +42,7 @@
               :class="{ active: 'pro' }"
               name="Pro"
               price="$9/mo"
+              duration="2 months free"
               @click="planSelected('pro')"
             >
               <div class="rounded-full h-8 w-8 bg-purplish-blue flex justify-center items-center">
@@ -47,8 +50,8 @@
           </div>
 
           <div class="pt-12">
-            <div class="bg-magnolia rounded-md h-10 w-96 relative">
-              <div class="absolute left-20 top-1">
+            <div class="bg-magnolia rounded-md h-12 w-96 relative">
+              <div class="absolute left-20 top-2">
                 <div class="flex items-center space-x-4">
                   <div><p class="text-marine-blue font-bold">Monthly</p></div>
                   <div><Switch></Switch></div>
