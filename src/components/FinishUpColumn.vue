@@ -6,7 +6,7 @@
           <p>Arcade(Monthly)</p>
           <p>$9/mo</p>
         </div>
-        <div><button class="text-purplish-blue focus:outline-none hover:underline ">change</button></div>
+        <div><button class="text-purplish-blue opacity-80 focus:outline-none hover:underline ">change</button></div>
       </div>
       <div class="border border-b border-light-gray opacity-80"></div>
       <div class="flex items-center justify-between">

@@ -17,7 +17,7 @@
             <button class="text-cool-gray focus:outline-none font-bold">
               Go back
             </button>
-            <Button class="bg-purplish-blue" />
+            <Button class="bg-purplish-blue opacity-70" />
           </div>
         </div>
       </div>
