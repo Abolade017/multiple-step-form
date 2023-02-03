@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-alabaster opacity-90 rounded-md w-96 h-48">
+  <div class="bg-alabaster opacity-95 rounded-md w-96 h-48">
     <div class="flex flex-col space-y-4 px-6 py-4">
       <div>
         <div class="text-marine-blue font-bold flex items-center justify-between">
