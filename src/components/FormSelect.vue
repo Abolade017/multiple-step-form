@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative h-40 w-36 rounded-md border border-light-gray hover:border-purplish-blue cursor-pointer"
+    class="relative h-40 w-36 rounded-md cursor-pointer"
   >
     <div class="pl-4 absolute top-6 ">
         <slot></slot>
@@ -15,6 +15,7 @@
 </template>
 <script setup lang="ts">
 import { defineProps } from "vue";
+import { ref } from "vue";
 interface Props {
   name: string;
   price: string;
@@ -22,3 +23,9 @@ interface Props {
 }
 const props = defineProps<Props>();
 </script>
+
+
+<style scoped>
+
+</style>
+

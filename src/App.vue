@@ -1,9 +1,3 @@
-<!-- <script setup>
-import { RouterView } from "vue-router";
-</script>
-<template>
-  <RouterView></RouterView> -->
-<!-- </template> -->
 <template>
   <main class="py-48">
     <div class="bg-white shadow-md rounded-lg max-w-4xl mx-auto">
@@ -23,8 +17,8 @@ import { RouterView } from "vue-router";
                     {{ step.id }}
                   </div>
                 </button>
-                <div class="flex flex-col h-10 cursor-pointer">
-                  <div class="uppercase text-light-gray text-sm">
+                <div class="flex flex-col h-10 cursor-pointer" @click="currentTab = step.compo">
+                  <div class="uppercase text-light-gray text-sm" >
                     {{ step.step }}
                   </div>
                   <div class="uppercase text-white font-semibold text-sm">

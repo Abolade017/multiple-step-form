@@ -5,12 +5,12 @@
   />
   <div class="pt-12 flex space-x-4 w-96">
     <Form-select
-      :class="{ active: 'arcade' }"
-      class="bg-magnolia"
+      :class="{ active: arcade }"
+      class="demo bg-magnolia"
       name="Arcade"
       price="$9/mo"
       duration="2 months free"
-      @click="planSelected('arcade')"
+      @click="planSelected('A')"
     >
       <div
         class="rounded-full h-8 w-8 bg-orange-400 flex justify-center items-center"
@@ -18,12 +18,12 @@
         <font-awesome-icon icon="fa-solid fa-gamepad" class="text-white" /></div
     ></Form-select>
     <Form-select
-      class="bg-alabaster"
-      :class="{ active: 'advanced' }"
+      :class="{ active: advanced }"
+      class="demo bg-alabaster"
       name="Advanced"
       price="$9/mo"
       duration="2 months free"
-      @click="planSelected('advanced')"
+      @click="planSelected('B')"
     >
       <div
         class="rounded-full h-8 w-8 bg-strawberry-red opacity-75 flex justify-center items-center"
@@ -31,12 +31,12 @@
         <font-awesome-icon icon="fa-solid fa-gamepad" class="text-white" /></div
     ></Form-select>
     <Form-select
-      class="bg-white"
-      :class="{ active: 'pro' }"
+      :class="{ active: pro }"
+      class="demo bg-white"
       name="Pro"
       price="$9/mo"
       duration="2 months free"
-      @click="planSelected('pro')"
+      @click="planSelected('C')"
     >
       <div
         class="rounded-full h-8 w-8 bg-purplish-blue flex justify-center items-center"
@@ -63,30 +63,39 @@
     <Button class="bg-marine-blue" />
   </div>
 </template>
-
-<style></style>
 <script setup lang="ts">
 import FormSelect from "@/components/FormSelect.vue";
 import Button from "@/components/Button.vue";
 import Switch from "@/components/icons/SwitchButton.vue";
 import Heading from "@/components/Heading.vue";
-import { ref, computed, onMounted } from "vue";
+import { ref } from "vue";
 const arcade = ref(false);
 const pro = ref(false);
 const advanced = ref(false);
 // methods
-function planSelected(plan: string): any {
-  if (plan === "arcade") {
-    arcade.value = true;
-  } else if (plan === "pro") {
-    pro.value = true;
-  } else if (plan === "advanced") {
-    advanced.value = true;
+function planSelected(box: string) {
+  if (box === "A") {
+    arcade.value = !arcade.value;
+    console.log(arcade.value);
+  } else if (box === "B") {
+    advanced.value = !advanced.value;
+    console.log(advanced.value);
+  } else if (box === "C") {
+    pro.value = !pro.value;
+    console.log(advanced.value);
   }
 }
 </script>
 <style scoped>
 .active {
-  border-color: hsl(243, 100%, 62%);
+  border: solid 2px hsl(243, 100%, 62%);
+  border-radius: 5px;
+}
+.demo {
+  border: solid 2px hsl(217, 100%, 97%);
+}
+.demo:hover {
+  border: solid 2px hsl(243, 100%, 62%);
+  border-radius: 5px;
 }
 </style>
