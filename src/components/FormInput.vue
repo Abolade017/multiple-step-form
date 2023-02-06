@@ -42,9 +42,9 @@
           />
           <p class="p-2 text-strawberry-red">{{ phone_no }}</p>
         </div>
-        <div class="flex justify-end pt-20 ">
-<Button class="bg-marine-blue"/>        
-    </div>
+        <div class="flex justify-end pt-20">
+          <Button class="bg-marine-blue" />
+        </div>
       </div>
     </label>
   </div>

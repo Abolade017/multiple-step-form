@@ -7,7 +7,8 @@
             <div class="flex flex-col space-y-10">
               <div class="flex space-x-4" v-for="step in steps" :key="step.id">
                 <button
-                  class="rounded-full h-10 w-10 bg-light-blue opacity-80 flex justify-center items-center"
+                  :class="{ active: 'bg-magnolia' }"
+                  class="rounded-full h-10 w-10 border opacity-80 flex justify-center items-center"
                   @click="currentTab = step.compo"
                 >
                   <div
@@ -17,8 +18,11 @@
                     {{ step.id }}
                   </div>
                 </button>
-                <div class="flex flex-col h-10 cursor-pointer" @click="currentTab = step.compo">
-                  <div class="uppercase text-light-gray text-sm" >
+                <div
+                  class="flex flex-col h-10 cursor-pointer"
+                  @click="currentTab = step.compo"
+                >
+                  <div class="uppercase text-light-gray text-sm">
                     {{ step.step }}
                   </div>
                   <div class="uppercase text-white font-semibold text-sm">
@@ -30,7 +34,11 @@
           </div>
         </div>
         <div class="w-2/3 pr-4 py-10">
-          <component :is="tabs[currentTab]"></component>
+          <KeepAlive>
+            <component :is="tabs[currentTab]"></component>
+          </KeepAlive>
+          <!-- -->
+          <!-- <button @click="$router.push({})">go back</button> -->
         </div>
       </div>
     </div>
@@ -39,6 +47,7 @@
 <script setup lang="ts">
 import { defineProps, reactive, ref } from "vue";
 import Heading from "./components/Heading.vue";
+import Button from "./components/Button.vue";
 import Addons from "./views/Addons.vue";
 import FinishingUp from "./views/FinishingUp.vue";
 import SelectYourPlan from "./views/SelectYourPlan.vue";
@@ -83,9 +92,7 @@ const tabs = {
   FinishingUp,
 };
 const currentTab: string = ref("PersonalInfo");
-function tab(item) {
-  console.log(item);
-}
+
 </script>
 
 <style scoped>

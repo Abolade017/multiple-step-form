@@ -57,7 +57,10 @@
     </div>
   </div>
   <div class="flex justify-between w-96 pt-24">
-    <button class="text-marine-blue focus:outline-none font-bold">
+    <button
+      class="text-marine-blue focus:outline-none font-bold"
+      @click="$router.push({name:'info'})"
+    >
       Go back
     </button>
     <Button class="bg-marine-blue" />
@@ -69,6 +72,8 @@ import Button from "@/components/Button.vue";
 import Switch from "@/components/icons/SwitchButton.vue";
 import Heading from "@/components/Heading.vue";
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+const router=useRouter;
 const arcade = ref(false);
 const pro = ref(false);
 const advanced = ref(false);
