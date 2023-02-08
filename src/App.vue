@@ -7,9 +7,9 @@
             <div class="flex flex-col space-y-10">
               <div class="flex space-x-4" v-for="step in steps" :key="step.id">
                 <button
-                  :class="{ active: 'bg-magnolia' }"
+                  :class="{ }"
                   class="rounded-full h-10 w-10 border opacity-80 flex justify-center items-center"
-                  @click="currentTab = step.compo"
+                  @click="currentTab = step.compo "
                 >
                   <div
                     class="items-center h-6 font-semibold text-marine-blue"
@@ -38,7 +38,7 @@
             <component :is="tabs[currentTab]"></component>
           </KeepAlive>
           <!-- -->
-          <!-- <button @click="$router.push({})">go back</button> -->
+          <!-- <button @click="$router.go(-1)">go back</button> -->
         </div>
       </div>
     </div>
@@ -52,6 +52,7 @@ import Addons from "./views/Addons.vue";
 import FinishingUp from "./views/FinishingUp.vue";
 import SelectYourPlan from "./views/SelectYourPlan.vue";
 import PersonalInfo from "./views/PersonalInfo.vue";
+import { useRouter } from "vue-router";
 
 interface Step {
   id: number;
@@ -91,7 +92,11 @@ const tabs = {
   Addons,
   FinishingUp,
 };
-const currentTab: string = ref("PersonalInfo");
+const currentTab  = ref("PersonalInfo");
+const router= useRouter;
+// function back(){
+//   router.
+// }
 
 </script>
 
@@ -100,5 +105,8 @@ const currentTab: string = ref("PersonalInfo");
   background-image: url("./assets/images/bg-sidebar-desktop.svg");
   background-repeat: no-repeat;
   background-size: contain;
+}
+.active{
+  background-color: hsl(206, 94%, 87%);
 }
 </style>

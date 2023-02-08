@@ -5,8 +5,8 @@
   />
   <div class="pt-12 flex space-x-4 w-96">
     <Form-select
-      :class="{ active: arcade }"
       class="demo bg-magnolia"
+      :class="{ active: arcade }"
       name="Arcade"
       price="$9/mo"
       duration="2 months free"
@@ -59,7 +59,7 @@
   <div class="flex justify-between w-96 pt-24">
     <button
       class="text-marine-blue focus:outline-none font-bold"
-      @click="$router.push({name:'info'})"
+      @click="back()"
     >
       Go back
     </button>
@@ -73,7 +73,7 @@ import Switch from "@/components/icons/SwitchButton.vue";
 import Heading from "@/components/Heading.vue";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-const router=useRouter;
+const router = useRouter;
 const arcade = ref(false);
 const pro = ref(false);
 const advanced = ref(false);
@@ -90,17 +90,18 @@ function planSelected(box: string) {
     console.log(advanced.value);
   }
 }
+function back() {
+  console.log(useRouter);
+}
 </script>
 <style scoped>
 .active {
   border: solid 2px hsl(243, 100%, 62%);
+  background-color: hsl(217, 100%, 97%);
   border-radius: 5px;
-}
-.demo {
-  border: solid 2px hsl(217, 100%, 97%);
 }
 .demo:hover {
   border: solid 2px hsl(243, 100%, 62%);
-  border-radius: 5px;
+  border-radius: 5px; 
 }
 </style>

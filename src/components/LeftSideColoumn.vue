@@ -38,7 +38,7 @@ const steps: Step[] = reactive([
         <button
           class="rounded-full h-10 w-10 bg-light-blue opacity-80 flex justify-center items-center"
         >
-          <div class="items-center h-6 font-semibold text-marine-blue" no="">
+          <div class="items-center h-6 font-semibold text-marine-blue" >
             {{ step.id }}
           </div>
         </button>

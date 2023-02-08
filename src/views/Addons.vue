@@ -21,7 +21,7 @@
     addons="+$2/mo"
   />
   <div class="flex justify-between w-96 pt-24">
-    <button class="text-cool-gray focus:outline-none font-bold" @click="$router.push({name:'select'})">Go back</button>
+    <button class="text-cool-gray focus:outline-none font-bold" @click="$router.go(-2)">Go back</button>
     <Button class="bg-marine-blue" />
   </div>
 
