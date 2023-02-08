@@ -7,7 +7,7 @@
             <div class="flex flex-col space-y-10">
               <div class="flex space-x-4" v-for="step in steps" :key="step.id">
                 <button
-                  :class="{ }"
+                  :class="{active:'step.value=!step.value' }"
                   class="rounded-full h-10 w-10 border opacity-80 flex justify-center items-center"
                   @click="currentTab = step.compo "
                 >
@@ -37,8 +37,6 @@
           <KeepAlive>
             <component :is="tabs[currentTab]"></component>
           </KeepAlive>
-          <!-- -->
-          <!-- <button @click="$router.go(-1)">go back</button> -->
         </div>
       </div>
     </div>
@@ -66,24 +64,29 @@ const steps: Step[] = reactive([
     step: "Step 1",
     title: "Your plan",
     compo: "PersonalInfo",
+    value:false
   },
   {
     id: 2,
     step: "Step 2",
     title: "Select Plan",
     compo: "SelectYourPlan",
+    value:false
   },
   {
     id: 3,
     step: "Step 3",
     title: "Add-ons",
     compo: "Addons",
+    value:false
   },
   {
     id: 4,
     step: "Step 4",
     title: "Summary",
     compo: "FinishingUp",
+    value:false
+
   },
 ]);
 const tabs = {
@@ -94,9 +97,7 @@ const tabs = {
 };
 const currentTab  = ref("PersonalInfo");
 const router= useRouter;
-// function back(){
-//   router.
-// }
+
 
 </script>
 

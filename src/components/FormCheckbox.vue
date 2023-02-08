@@ -12,6 +12,7 @@
             class="focus:bg-purplish-blue"
             v-model="checked"
           />
+          <span class="checkmark"></span>
           <div class="flex flex-col">
             <p class="text-marine-blue font-bold">{{ title }}</p>
             <p class="text-cool-gray">{{ subTitle }}</p>
@@ -21,7 +22,6 @@
       </div>
     </div>
   </label>
-  
 </template>
 <script setup lang="ts">
 import { ref, defineProps } from "vue";
@@ -33,3 +33,10 @@ interface Props {
 const props = defineProps<Props>();
 const checked = ref(false);
 </script>
+<style scoped>
+/* .active{
+  background-color: hsl(243, 100%, 62%);
+} */
+
+
+</style>
