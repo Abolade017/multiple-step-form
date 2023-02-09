@@ -35,7 +35,7 @@
         </div>
         <div class="w-2/3 pr-4 py-10">
           <KeepAlive>
-            <component :is="tabs[currentTab]"></component>
+            <component :is="tabs[currentTab as keyof typeof tabs]"></component>
           </KeepAlive>
         </div>
       </div>
@@ -89,12 +89,12 @@ const steps: Step[] = reactive([
 
   },
 ]);
-const tabs = {
+const tabs = reactive({
   PersonalInfo,
   SelectYourPlan,
   Addons,
   FinishingUp,
-};
+});
 const currentTab  = ref("PersonalInfo");
 const router= useRouter;
 
