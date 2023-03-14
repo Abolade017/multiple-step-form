@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-alabaster opacity-95 rounded-md w-96 h-48">
+  <div class="bg-alabaster opacity-95 rounded-md md:w-96 h-48">
     <div class="flex flex-col space-y-4 px-6 py-4">
       <div>
         <div class="text-marine-blue font-bold flex items-center justify-between">
@@ -19,7 +19,7 @@
       </div>
     </div>
   </div>
-  <div class="flex justify-between items-center px-6 pt-4 w-96">
+  <div class="flex justify-between items-center px-6 pt-4 md:w-96">
     <div class="text-cool-gray">Total(per month)</div>
     <div class="text-purplish-blue font-bold text-lg">+$12/mo</div>
   </div>

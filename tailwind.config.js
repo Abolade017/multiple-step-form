@@ -19,7 +19,9 @@ module.exports = {
         "alabaster": "hsl(231, 100%, 99%)",
 
       },
-
+width:{
+  '100':'26rem'
+}
     },
   },
   plugins: [],

@@ -1,10 +1,10 @@
 <template>
   <label class="cursor-pointer">
     <div
-      class="border border-purplish-blue rounded-md h-20 w-96 items-center my-4 bg-alabaster px-4"
+      class="border border-light-gray rounded-md h-20 md:w-96 items-center my-4 bg-alabaster px-4"
     >
       <div class="flex justify-between items-center">
-        <div class="flex space-x-6 items-center pt-4">
+        <div class="flex space-x-2 md:space-x-6 items-center pt-4">
           <input
             type="checkbox"
             name=""
@@ -14,11 +14,11 @@
           />
           <span class="checkmark"></span>
           <div class="flex flex-col">
-            <p class="text-marine-blue font-bold">{{ title }}</p>
-            <p class="text-cool-gray">{{ subTitle }}</p>
+            <p class="text-marine-blue font-bold text-sm">{{ title }}</p>
+            <p class="text-cool-gray text-sm">{{ subTitle }}</p>
           </div>
         </div>
-        <div class="text-purplish-blue">{{ addons }}</div>
+        <div class="text-purplish-blue text-sm pt-2">{{ addons }}</div>
       </div>
     </div>
   </label>

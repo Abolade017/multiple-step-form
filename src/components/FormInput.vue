@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-6 pr-20">
+  <div class="pt-6 px-0 md:pl-0 md:pr-20">
     <label>
       <div class="flex flex-col space-y-4">
         <div>
@@ -10,7 +10,8 @@
             type="text"
             name=""
             id=""
-            class="w-full rounded-md border border-gray-200 h-10 text-marine-blue"
+            placeholder="e.g stephen king"
+            class="w-full rounded-md border border-gray-200 h-12 text-marine-blue placeholder:pl-4"
             v-model="name"
           />
           <p class="p-2 text-strawberry-red">{{ name }}</p>
@@ -23,7 +24,8 @@
             type="email"
             name=""
             id=""
-            class="w-full rounded-md border border-gray-200 h-10 text-marine-blue"
+            class="w-full rounded-md border border-gray-200 h-12 text-marine-blue placeholder:pl-4"
+            placeholder="e.g stephenking@lorem.com"
             v-model="email"
           />
           <p class="p-2 text-strawberry-red">{{ email }}</p>
@@ -36,13 +38,13 @@
             type="tel"
             name=""
             id=""
-            class="w-full rounded-md border border-gray-200 h-10 text-marine-blue"
+            class="w-full rounded-md border border-gray-200 h-12 text-marine-blue placeholder:pl-4"
             v-model="phone_no"
             placeholder="e.g. +1234567890"
           />
           <p class="p-2 text-strawberry-red">{{ phone_no }}</p>
         </div>
-        <div class="flex justify-end pt-20">
+        <div class="md:flex justify-end pt-20 hidden">
           <Button class="bg-marine-blue" />
         </div>
       </div>
